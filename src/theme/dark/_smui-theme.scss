@@ -1,0 +1,29 @@
+@use 'sass:color';
+
+@use '@material/theme/color-palette';
+
+// Svelte Colors! (Dark Theme)
+@use '@material/theme/index' as theme with (
+  $primary: color-palette.$red-500,
+  $secondary: color-palette.$blue-500,
+  $surface: color-palette.$grey-900,
+  $background: color-palette.$grey-800,
+  $error: color-palette.$red-500
+);
+
+@use '@material/typography/mdc-typography.import' with (
+  $mdc-typography-font-family: unquote("'Poppins', 'Roboto', sans-serif")
+);
+
+html,
+body {
+  background-color: theme.$surface;
+  color: theme.$on-surface;
+}
+
+a {
+  color: color-palette.$indigo-400;
+}
+a:visited {
+  color: color.scale(color-palette.$indigo-400, $lightness: -35%);
+}

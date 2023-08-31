@@ -11,14 +11,14 @@
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 		<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
 			
 		<!-- Material Typography -->
 		<link rel="stylesheet" href="https://unpkg.com/@material/typography/dist/mdc.typography.css" />
 
 		<!-- SMUI Themes -->
-		<!-- <link rel="stylesheet" href="/src/theme/smui.css" media="(prefers-color-scheme: light)" />
-		<link rel="stylesheet" href="/src/theme/dark/smui-dark.css" media="screen and (prefers-color-scheme: dark)"/> -->
+		<link rel="stylesheet" href="/src/theme/smui.css" media="(prefers-color-scheme: light)" />
+		<link rel="stylesheet" href="/src/theme/dark/smui-dark.css" media="screen and (prefers-color-scheme: dark)"/>
 
 		%sveltekit.head%
 	</head>

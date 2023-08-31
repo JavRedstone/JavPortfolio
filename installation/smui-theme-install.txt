@@ -1,0 +1,38 @@
+npm install --save-dev smui-theme
+npx smui-theme template src/theme
+
+Typography
+
+@use '@material/typography/mdc-typography.import' with (
+  $mdc-typography-font-family: unquote("'Poppins', 'Roboto', sans-serif")
+);
+
+package.json -> scripts
+
+"prepare": "npm run smui-theme-light && npm run smui-theme-dark",
+"smui-theme-light": "smui-theme compile src/theme/smui.css -i src/theme",
+"smui-theme-dark": "smui-theme compile src/theme/dark/smui-dark.css -i src/theme/dark"
+
+npm run prepare
+
++template.svelte
+
+<svelte:head>
+    {#if darkMode === undefined}
+        <link
+            rel="stylesheet"
+            href="/src/theme/smui.css"
+            media="(prefers-color-scheme: light)"
+        />
+        <link
+            rel="stylesheet"
+            href="/src/theme/dark/smui-dark.css"
+            media="screen and (prefers-color-scheme: dark)"
+        />
+    {:else if darkMode}
+        <link rel="stylesheet" href="/src/theme/smui.css" media="print" />
+        <link rel="stylesheet" href="/src/theme/dark/smui-dark.css" media="screen" />
+    {:else}
+        <link rel="stylesheet" href="/src/theme/smui.css" />
+    {/if}
+</svelte:head>

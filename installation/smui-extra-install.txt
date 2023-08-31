@@ -1,0 +1,5 @@
+npm i --save-dev @smui-extra/autocomplete
+npm i --save-dev @smui-extra/badge
+npm i --save-dev @smui-extra/bottom-app-bar
+npm i --save-dev @smui-extra/accordion
+npm i --save-dev @smui-extra/site
