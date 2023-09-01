@@ -17,6 +17,8 @@ npm run prepare
 
 +template.svelte
 
+doesnt work at the moment, but theme switcher:
+
 <svelte:head>
     {#if darkMode === undefined}
         <link
