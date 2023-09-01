@@ -17,8 +17,8 @@
 		<link rel="stylesheet" href="https://unpkg.com/@material/typography/dist/mdc.typography.css" />
 
 		<!-- SMUI Themes -->
-		<link rel="stylesheet" href="/src/theme/smui.css" media="(prefers-color-scheme: light)" />
-		<link rel="stylesheet" href="/src/theme/dark/smui-dark.css" media="screen and (prefers-color-scheme: dark)"/>
+		<link rel="stylesheet" href="src/theme/smui.css" media="(prefers-color-scheme: light)" />
+		<link rel="stylesheet" href="src/theme/dark/smui-dark.css" media="screen and (prefers-color-scheme: dark)"/>
 
 		%sveltekit.head%
 	</head>

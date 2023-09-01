@@ -14,8 +14,8 @@
 		"test:integration": "playwright test",
 		"test:unit": "vitest",
 		"prepare": "npm run smui-theme-light && npm run smui-theme-dark",
-		"smui-theme-light": "smui-theme compile src/theme/smui.css -i src/theme",
-		"smui-theme-dark": "smui-theme compile src/theme/dark/smui-dark.css -i src/theme/dark"
+		"smui-theme-light": "smui-theme compile src/routes/smui.css -i src/theme",
+		"smui-theme-dark": "smui-theme compile src/routes/smui-dark.css -i src/theme/dark"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.28.1",

@@ -22,32 +22,21 @@
         overflow: hidden;
     }
 </style>
-<svelte:head>
-    {#if darkMode === undefined}
-        <link
-            rel="stylesheet"
-            href="/src/theme/smui.css"
-            media="(prefers-color-scheme: light)"
-        />
-        <link
-            rel="stylesheet"
-            href="/src/theme/dark/smui-dark.css"
-            media="screen and (prefers-color-scheme: dark)"
-        />
-    {:else if darkMode}
-        <link rel="stylesheet" href="/src/theme/smui.css" media="print" />
-        <link rel="stylesheet" href="/src/theme/dark/smui-dark.css" media="screen" />
+<!-- <svelte:head>
+    {#if darkMode}
+        <link rel="stylesheet" href='../theme/dark/smui-dark.css' media="print" />
+        <link rel="stylesheet" href='../theme/smui.css' media="screen" />
     {:else}
-        <link rel="stylesheet" href="/src/theme/smui.css" />
+        <link rel="stylesheet" href='../theme/dark/smui-dark.css' />
     {/if}
-</svelte:head>
+</svelte:head> -->
 <main>
     <TopAppBar bind:this={topAppBar} variant="standard" dense>
         <Row>
             <Section align="start" toolbar>
                 <Title>Welcome to JavPortfolio.</Title>
             </Section>
-            <Section align="end" toolbar>
+            <!-- <Section align="end" toolbar>
                 <IconButton class="material-symbols-outlined" on:click={switchDarkLight}>
                     {#if darkMode}
                         dark_mode
@@ -55,7 +44,7 @@
                         light_mode
                     {/if}
                 </IconButton>
-            </Section>
+            </Section> -->
         </Row>
     </TopAppBar>
     <div style="margin-top: 48px; padding: 48px">
@@ -65,8 +54,11 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import TopAppBar, { Row, Section, Title } from '@smui/top-app-bar';
-    import IconButton from '@smui/icon-button';
+    // import IconButton from '@smui/icon-button';
 
+    import '../theme/dark/smui-dark.css';
+    // import '../theme/smui.css';
+    
     let topAppBar: TopAppBar;
     let darkMode: boolean = false;
 

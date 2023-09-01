@@ -1,4 +1,4 @@
-npm install --save-dev smui-theme
+npm install -D smui-theme
 npx smui-theme template src/theme
 
 Typography
@@ -21,18 +21,18 @@ npm run prepare
     {#if darkMode === undefined}
         <link
             rel="stylesheet"
-            href="/src/theme/smui.css"
+            href="src/theme/smui.css"
             media="(prefers-color-scheme: light)"
         />
         <link
             rel="stylesheet"
-            href="/src/theme/dark/smui-dark.css"
+            href="src/theme/dark/smui-dark.css"
             media="screen and (prefers-color-scheme: dark)"
         />
     {:else if darkMode}
-        <link rel="stylesheet" href="/src/theme/smui.css" media="print" />
-        <link rel="stylesheet" href="/src/theme/dark/smui-dark.css" media="screen" />
+        <link rel="stylesheet" href="src/theme/smui.css" media="print" />
+        <link rel="stylesheet" href="src/theme/dark/smui-dark.css" media="screen" />
     {:else}
-        <link rel="stylesheet" href="/src/theme/smui.css" />
+        <link rel="stylesheet" href="src/theme/smui.css" />
     {/if}
 </svelte:head>
